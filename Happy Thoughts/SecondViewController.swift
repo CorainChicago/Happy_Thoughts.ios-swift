@@ -9,6 +9,9 @@
 import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet var txtName: UITextField!
+    @IBOutlet var txtDescription: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,16 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //Events
+    @IBAction func btnAddThought_click(sender: UIButton){
+        thoughtMgr.addThought(txtName.text!, description: txtDescription.text!)
+        self.view.endEditing(true)
+        txtName.text = ""
+        txtDescription.text = ""
+        self.tabBarController?.selectedIndex = 0;
+    }
+    
+    // Button Touch to Remove keyboard
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }

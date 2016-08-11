@@ -9,6 +9,8 @@
 import UIKit
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var tblThoughts: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,21 +22,27 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Dispose of any resources that can be recreated.
     }
     
+    // returning to view
+    override func viewWillAppear(animated: Bool) {
+        tblThoughts.reloadData()
+    }
     
-    //UITable View Data Source
+    
+    //UITable View Data Sourc
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return thoughtMgr.thoughts.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        
-        
-        let cell: UITableViewCell = UITableViewCell()
-        cell.detailTextLabel?.text = thoughtMgr.thoughts[indexPath.row].name
-        return cell
-        
-    }
-
+    
+        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+            let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Default Tasks")
+            
+            cell.textLabel?.text = thoughtMgr.thoughts[indexPath.row].name
+            cell.detailTextLabel?.text = thoughtMgr.thoughts[indexPath.row].description
+            
+            return cell
+        }
+    
 
 }
 
