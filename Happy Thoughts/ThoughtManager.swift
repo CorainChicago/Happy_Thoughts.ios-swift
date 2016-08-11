@@ -19,7 +19,7 @@ struct thought{
 
 class ThoughtManager: NSObject {
     
-    var thoughts = thought[]()
+    var thoughts: [thought] = []
     
     func addThought(name: String, description: String){
         thoughts.append(thought(name: name, description: description))
