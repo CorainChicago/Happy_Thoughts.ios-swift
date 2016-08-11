@@ -13,6 +13,7 @@
 		2C0C1D551D5CF768003B4D1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0C1D531D5CF768003B4D1F /* Main.storyboard */; };
 		2C0C1D571D5CF768003B4D1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0C1D561D5CF768003B4D1F /* Assets.xcassets */; };
 		2C0C1D5A1D5CF768003B4D1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0C1D581D5CF768003B4D1F /* LaunchScreen.storyboard */; };
+		2C0C1D661D5CF8B1003B4D1F /* ThoughtManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C1D651D5CF8B1003B4D1F /* ThoughtManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2C0C1D561D5CF768003B4D1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C0C1D591D5CF768003B4D1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C0C1D5B1D5CF768003B4D1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0C1D651D5CF8B1003B4D1F /* ThoughtManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThoughtManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				2C0C1D561D5CF768003B4D1F /* Assets.xcassets */,
 				2C0C1D581D5CF768003B4D1F /* LaunchScreen.storyboard */,
 				2C0C1D5B1D5CF768003B4D1F /* Info.plist */,
+				2C0C1D651D5CF8B1003B4D1F /* ThoughtManager.swift */,
 			);
 			path = "Happy Thoughts";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C0C1D521D5CF768003B4D1F /* SecondViewController.swift in Sources */,
+				2C0C1D661D5CF8B1003B4D1F /* ThoughtManager.swift in Sources */,
 				2C0C1D4E1D5CF768003B4D1F /* AppDelegate.swift in Sources */,
 				2C0C1D501D5CF768003B4D1F /* FirstViewController.swift in Sources */,
 			);
