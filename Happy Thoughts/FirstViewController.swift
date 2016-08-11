@@ -27,6 +27,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tblThoughts.reloadData()
     }
     
+    // UITableDelegate to remove a thought
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+        
+        if (editingStyle == UITableViewCellEditingStyle.Delete){
+            thoughtMgr.thoughts.removeAtIndex(indexPath.row)
+            tblThoughts.reloadData()
+        }
+    }
+    
     
     //UITable View Data Sourc
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
